@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+
+\usepackage[fixamsmath,allowspaces]{mathtools}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage[a4paper]{geometry}
+\usepackage[italian]{babel}
+\usepackage{tikz, pgfplots, circuitikz, siunitx}
+\usepackage{mathdots, mathrsfs, multicol}
+\usepackage{amssymb, amsthm, amsmath}
+\usepackage{listings}
+\usepackage{physics}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{subfiles}
+
+\pagestyle{fancy}
+
+\input{../../../Admin/Utils/CustomMacro.sty}
+
+\begin{document}
+\subfile{../Sezioni/TitlePage.tex}
+
+\tableofcontents
+
+\section{Il SI e le grandezze di misura.}
+\subfile{../Sezioni/Sezione 1: Il SI e le grandezze di misura.tex}
+
+\section{Analisi dimensionale.}
+\subfile{../Sezioni/Sezione 2: Analisi dimensionale.tex}
+
+\section{Cifre significative.}
+\subfile{../Sezioni/Sezione 3: Cifre significative.tex}
+
+\section{Posizione e velocità.}
+\subfile{../Sezioni/Sezione 4: Moto unidimensionale.tex}
+
+\section{Moto di un corpo puntiforme.}
+\subfile{../Sezioni/Sezione 5: Moto di un corpo puntiforme.tex}
+
+\section{Moto del proiettile.}
+\subfile{../Sezioni/Sezione 6: Moto del proiettile.tex}
+
+\section{Moto circolare uniforme.}
+\subfile{../Sezioni/Sezione 7: Moto circolare uniforme.tex}
+
+\section{Leggi del moto.}
+
+%TODO: Fix caption figure 1, 2, 3. Figure 1, 2 add theta angle
+\end{document}

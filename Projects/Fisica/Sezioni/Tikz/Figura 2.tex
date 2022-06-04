@@ -1,0 +1,58 @@
+\documentclass[../../Main/Appunti Fisica.tex]{subfiles}
+\begin{document}
+\begin{figure}[!h]
+    \centering
+    \begin{tikzpicture}[scale = 1, every node/.style={scale=1}]
+
+        % Axis
+        \draw[-stealth, thick] (0, 0) -- (0, 3);
+        \node (y) [anchor = west] at (0, 3) {\(\mathit{y}\)};
+
+        \draw[-stealth, thick] (0, 0) -- (4, 0);
+        \node (x) [anchor = south] at (4, 0) {\(\mathit{x}\)};
+
+        % Bullet trajectory
+        \draw (1.5, 1.5) parabola (0.5, 0.825);
+        \draw (1.5, 1.5) parabola (3, 0);
+
+        % Points of interest
+        \node [circ, color = MidnightBlue] at (0, 0) {};
+        \node (a) [anchor = north east] at (0, 0) {\textcircled{a}};
+
+        \node [circ, color = MidnightBlue] at (1.5, 1.5) {};
+        \node (b) [anchor = south east] at (1.5, 1.5) {\textcircled{b}};
+
+        \node [circ, color = MidnightBlue] at (3, 0) {};
+        \node (c) [anchor = north east] at (3, 0) {\textcircled{c}};
+
+        % Velocity of each point
+        %% A
+        \draw[-to, MidnightBlue, thick] (0, 0) -- (0.5, 0.825);
+        \node [anchor = south] at (0.5, 0.825) {\(\va{v_{0}}\)};
+
+        \draw[-to, MidnightBlue, thick] (0, 0) -- (0, 0.5);
+        \node [anchor = north] at (0.5, 0) {\(\vb{v_{x}}\)};
+
+        \draw[-to, MidnightBlue, thick] (0, 0) -- (0.5, 0);
+        \node [anchor = east] at (0, 0.5) {\(\vb{v_{yi}}\)};
+
+        %% B
+        \draw[-to, MidnightBlue, thick] (1.5, 1.5) -- (2, 1.5);
+        \node [anchor = west] at (2, 1.5) {\(\vb{v_{y}} = 0\)};
+
+        %% C
+        \draw[-to, MidnightBlue, thick] (3, 0) -- (3.5, -0.825);
+        \node [anchor = north] at (3.5, -0.825) {\(\vb{v_{f}}\)};
+
+        \draw[-to, MidnightBlue, thick] (3, 0) -- (3, -0.5);
+        \node [anchor = north] at (3, -0.5) {\(\vb{v_{yf}}\)};
+
+        \draw[-to, MidnightBlue, thick] (3, 0) -- (3.5, 0);
+        \node [anchor = south] at (3.5, 0) {\(\vb{v_{x}}\)};
+
+
+    \end{tikzpicture}
+    \caption{Schema rappresentativo di moto del proiettile.}
+    \label{fig:1}
+\end{figure}
+\end{document}

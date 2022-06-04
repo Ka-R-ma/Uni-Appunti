@@ -1,0 +1,38 @@
+\documentclass[../../Main/Appunti Fisica.tex]{subfiles}
+\begin{document}
+Si consideri una retta orientata, per stabilire la posizione di un punto \(x \neq 0\), è necessario sapere dove questi si trovi rispetto il punto di riferimento.
+\\
+Si consideri la seguente retta orientata
+\begin{figure}[!h]
+    \centering
+    \begin{tikzpicture}[scale = 1, every node/.style={scale=1}]
+
+        \draw [->, ultra thick] (-1, 0) -- (3, 0);
+
+        \node [anchor = south] at (0, 0) {0};
+        \node [anchor = north] at (1.5, 0) {\(x_{i}\)};
+        \node [anchor = north] at (2.5, 0) {\(x_{f}\)};
+
+        \node [circ] at (0, 0) {};
+        \node [circ] at (1.5, 0) {};
+        \node [circ] at (2.5, 0) {};
+
+    \end{tikzpicture}
+\end{figure}
+ove sono stati fissati i punti \(x_{i} \text{e} x_{f}\).
+\\ \\
+Si definisce spostamento, la variazione di posizione del punto in un certo lasso di tempo.
+Cioè
+\[
+    \Delta x = x_{f} - x_{i}
+\]
+Dalla variazione di posizione si può ricavare la velocità media con cui avviene tale spostamento, la quale è data dalla seguente relazione.
+\[
+    \vb{v} = \frac{\Delta x}{\Delta t}
+\]
+Spesso però risulta utile conoscere la velocità del corpo in un certo istante di tempo, in questo caso si parlerà di velocità istantanea ed è data dalla seguente relazione.
+\[
+    v = \lim\limits_{\Delta t \to 0} \frac{\Delta x}{\Delta t} = \dv{x}{t}
+\]
+\end{document}
+\clearpage

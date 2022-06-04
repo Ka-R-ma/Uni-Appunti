@@ -1,0 +1,36 @@
+\documentclass[../Main/Appunti Fisica.tex]{subfiles}
+\begin{document}
+Si definisce moto circolare uniforme, il moto di un corpo che, muovendosi su un percorso circolare, mantiene una velocità costante.
+
+\begin{Fact*}
+    Un corpo che si muove a velocità costante su una traiettoria circolare, possiede un'accelerazione.
+\end{Fact*}
+%
+Poiché la velocità è una grandezza vettoriale, la presenza di un'accelerazione è dovuta a due possibili ragioni, quali:
+\begin{enumerate}
+    \item variazione del modulo della velocità;
+    \item variazione della direzione della velocità.
+\end{enumerate}
+%
+L'accelerazione del moto circolare è dovuta proprio a ques'ultimo motivo.
+Infatti, il vettore velocità, sempre tangente alla traiettoria circolare, è perpendicolare al raggio della stessa.
+\\ \\
+Si consideri ora la figura di seguito riportata.
+\subfile{../Sezioni/Tikz/Figura 3.tex}
+
+Ponendo \(\va{v_{i}} \text{e} \va{v_{f}}\) coda contro coda, si nota che l'angolo fra essi compreso è \(\theta\),
+da cui i triangoli \(\widehat{r_{i} \Delta r r_{f}} \text{e} \widehat{v_{i} \Delta v v_{f}}\) sono simili.\\
+\`E possibile pertanto stabilire una relazione tra i lati come segue.
+\[
+    \frac{\abs{\Delta \va{v}}}{\vb{v}} = \frac{\abs{\Delta r}}{\vb{r}}
+\]
+
+ove \(\vb{v} = \vb{v_{i}} = \vb{v_{f}} \text{e} \vb{r} = \vb{r_{i}} = \vb{r_{f}}\).
+
+Risolvendo rispetto \(\va{v}\) e calcolando il limite per \(\Delta \to 0\), segue
+\[
+    \lim\limits_{\Delta t \to 0} {\frac{\vb{v}}{\vb{r}} \frac{\abs{\Delta \va{r}}}{\abs{\Delta t}}} = \frac{\vb{v}^{2}}{\vb{r}} = \vb{a_{c}}
+\]
+\clearpage
+
+\end{document}

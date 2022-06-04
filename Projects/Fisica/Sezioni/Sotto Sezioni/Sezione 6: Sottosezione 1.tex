@@ -1,0 +1,60 @@
+\documentclass[../../Main/Appunti Fisica.tex]{subfiles}
+\begin{document}
+Si consideri la figura di seguito riportata.
+\begin{figure}[!h]
+    \centering
+    \begin{tikzpicture}[scale = 1, every node/.style={scale=1}]
+
+        % Axis
+        \draw[-stealth, thick] (0, 0) -- (0, 3);
+        \node (y) [anchor = west] at (0, 3) {\(\mathit{y}\)};
+
+        \draw[-stealth, thick] (0, 0) -- (4, 0);
+        \node (x) [anchor = south] at (4, 0) {\(\mathit{x}\)};
+
+        % Bullet trajectory
+        \draw (1.5, 1.5) parabola (0.5, 0.825);
+        \draw (1.5, 1.5) parabola (3, 0);
+
+        % Points of interest
+        \node [circ, color = MidnightBlue] at (0, 0) {};
+        \node (a) [anchor = north east] at (0, 0) {\textcircled{a}};
+
+        \node [circ, color = MidnightBlue] at (1.5, 1.5) {};
+        \node (b) [anchor = south east] at (1.5, 1.5) {\textcircled{b}};
+
+        \node [circ, color = MidnightBlue] at (3, 0) {};
+        \node (c) [anchor = north east] at (3, 0) {\textcircled{c}};
+
+        % Velocity in A
+        \draw[-to, MidnightBlue, thick] (0, 0) -- (0.5, 0.825);
+        \node [anchor = south] at (0.5, 0.825) {\(\va{v_{0}}\)};
+
+        % Maximum height and range
+        %% Height
+        \draw[to-to, thick, MidnightBlue] (1.5, 1.5) -- (1.5, 0);
+        \node (h) [anchor = west] at (1.5, 0.75) {\(H\)};
+
+        %% Range
+        \draw[|-|, thick, MidnightBlue] (0, -1) -- (3, -1);
+        \node (r) [anchor = south] at (1.5, -1) {\(R\)};
+
+    \end{tikzpicture}
+    \caption{Schema rappresentativo di moto del proiettile con gittata e altezza.}
+    \label{fig:2}
+\end{figure}
+
+Dalla \textit{Figura \ref{fig:2}}, supponendo che in \textcircled{a}, \(x_{0} = 0\) e il proiettile ha una certa velocità \(\vb{v_{y}}\), si nota che:
+\begin{itemize}
+    \item \textcircled{b} è il punto di massima elevazione raggiunto dal proiettile;
+    \item \textcircled{c} è il punto in cui il proiettile raggiunge lo stesso livello orizzontale di partenza.
+\end{itemize}
+%
+Ponendo \(H \text{e} R\) rispettivamente: distanza massima verticale, distanza massima orizzontale, segue
+\[\begin{gathered}
+        H = \frac{\vb{v_{0}}^{2} \sin^{2}{\theta_{0}}}{2\vb{g}} \\
+        R = \vb{v_{x}} \cos{\theta_{0}} \frac{\vb{v_{x}}^{2} \sin{2\theta_{0}}}{\vb{g}} \\
+    \end{gathered}\]
+%
+Pertanto si ha che \(R\) è massima se \(\theta_{0} = 45\).
+\end{document}

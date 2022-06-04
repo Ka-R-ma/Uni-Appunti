@@ -1,0 +1,150 @@
+% Definitions of Theorem-like environments
+%% Theorem style for numbered theorem-like envinments
+\newtheoremstyle{Plain}{5pt}{5pt}{\itshape}{}{\bfseries}{.}{\newline}{\thmname{#1} \thmnumber{#2}}
+
+%% Theorem style for unnumbered theorem-like envinments
+\newtheoremstyle{Plain*}{5pt}{5pt}{\itshape}{}{\bfseries}{.}{\newline}{\thmname{#1} \thmnote{#3}}
+\newtheoremstyle{Proof*}{5pt}{5pt}{}{}{\bfseries\itshape}{.}{\newline}{\thmname{#1}}
+\newtheoremstyle{Definition*}{5pt}{5pt}{}{}{\bfseries}{.}{\newline}{\thmname{#1}}
+\newtheoremstyle{Remark*}{5pt}{5pt}{}{}{\bfseries\itshape}{.}{\newline}{\thmname{#1}}
+
+%%% Numbered theorems-like environments
+\theoremstyle{Plain}
+\newtheorem{Corollary}[subsection]{Corollario}
+\newtheorem{Theorem}[subsection]{Teorema}
+\newtheorem{Lemma}[subsection]{Lemma}
+
+%%% Unumbered theorems-like environments
+\theoremstyle{Plain*}
+\newtheorem*{Principle*}{Principio}
+\newtheorem*{Postulate*}{Postulato}
+\newtheorem*{Theorem*}{Teorema}
+\newtheorem*{Axiom*}{Assioma}
+\newtheorem*{Law*}{Legge}
+
+\theoremstyle{Definition*}
+\newtheorem*{CounterExample*}{Contro Esempio}
+\newtheorem*{Proposition*}{Proposizione}
+\newtheorem*{Definition*}{Definizione}
+\newtheorem*{Solution*}{Svolgimento}
+\newtheorem*{Exercise*}{Esercizio}
+\newtheorem*{Example*}{Esempio}
+
+\theoremstyle{Remark*}
+\newtheorem*{Remark*}{Osservazione}
+\newtheorem*{Fact*}{Fatto}
+\newtheorem*{Note*}{Nota}
+
+\theoremstyle{Proof*}
+\newtheorem*{Proof}{Dimostrazione}
+
+% Packages Option
+%% Math encviroment color
+\everymath{\color{MidnightBlue}}
+\everydisplay{\color{MidnightBlue}}
+
+%% Tikz and related
+\pgfplotsset{my style/.append style={axis x line=middle, axis y line=middle, xlabel={\(x\)}, ylabel={\(y\)}, axis equal}, compat=1.16}
+\usetikzlibrary{angles, arrows.meta, quotes, patterns, calc, automata, positioning}
+\ctikzset{american, full diodes}
+
+\tikzset{
+mux 2by1/.style={muxdemux, muxdemux def={Lh=1.5, Rh=3, NL=1, NB=1, NR=2}},
+latch SR/.style={flipflop, flipflop def={t1=S, t3=R, t4={\overline{Q}}, t6=Q}},
+latch D/.style={flipflop, flipflop def={cu=1, tu=CLK, t2=D, t4={\overline{Q}}, t6=Q}},
+flipflop D/.style={flipflop, flipflop def={t2=D, cu=1, tu=CLK, t5=Q}},
+flipflop EN/.style={flipflop, flipflop def={cu=1, tu=CLK, t2=D, t5=Q, td=EN}},
+flipflop R/.style={flipflop, flipflop def={cu=1, tu=CLK, t2=D, t5=Q, td=RES}},
+flipflop GEN/.style={flipflop, flipflop def={cu=1, tu=CLK, t2=D, t5=D}}
+}
+
+%% Lstlisting styles
+\lstdefinestyle{C}{
+	%Basic settings
+	language = c,
+	basicstyle = \small\ttfamily,
+	tabsize = 1,
+	showstringspaces = false,
+	aboveskip = 10pt,
+	belowskip = 10pt,
+	upquote = true,
+	sensitive = false,
+	columns = flexible,
+	autogobble = true,
+	frame = single,
+	%Keyword style
+	morekeywords = [1]{size_t, null, file}, keywordstyle = [1]{\color{red}},
+	morekeywords = [2]{include, define}, keywordstyle = [2]{\color{Apricot}},
+	morekeywords = [3]{main, printf, scanf, malloc, strstr, strchr, strcmp, strcat, strcpy, strncpy, strlen, gets, puts, getchar, scambio, massimo, minimo, fopen, fclose, fprintf, fscanf, feof}, keywordstyle = [3]{\color{Purple}},
+	otherkeywords = {?, =, ;, >>, <<, :, \#, \&, *},
+	emph = {\#}, emphstyle = {\color{Apricot}},
+	%Comment style
+	commentstyle = \color{Gray}\itshape,
+	morecomment = [l]\%,
+	%String style
+	stringstyle = \color{MidnightBlue},
+	morestring=[b]",
+	morestring=[d]'
+}
+
+% Redefinition of existing commands
+\let\oldInt\int
+\renewcommand{\int}[2]{\oldInt#1 \: {\dd#2}}
+
+\let\oldDet\det
+\let\oldDim\dim
+\let\oldKer\ker
+\renewcommand{\det}[1][A]{\oldDet #1}
+\renewcommand{\dim}[1][V]{\oldDim #1}
+\renewcommand{\ker}[1][f]{\oldKer #1}
+
+\let\oldToC\tableofcontents
+\let\oldMaketitle\maketitle
+
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{2}
+
+\renewcommand{\tableofcontents}{\oldToC \clearpage}
+\renewcommand{\maketitle}{\oldMaketitle \clearpage}
+
+\let\oldText\text
+\renewcommand{\text}[1]{\oldText{ {\color{black} #1} }}
+
+% Custom macros
+\DeclareMathOperator{\Image}{im}
+\DeclareMathOperator{\Tc}{t.c.}
+
+\newcommand{\LinearComposition}[1]{\mathscr{L}(#1)}
+\newcommand{\SistemSolution}[1]{\mathcal{S}(#1)}
+\newcommand{\Img}[1]{\Image #1}
+
+\newcommand{\Naturals}{\mathbb{N}}
+\newcommand{\Integers}{\mathbb{Z}}
+\newcommand{\Rationals}{\mathbb{Q}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complecs}{\mathbb{C}}
+
+\let\N\Naturals
+\let\Z\Integers
+\let\Q\Rationals
+\let\R\Reals
+\let\C\Complecs
+
+\newcommand{\set}[2]{\left\{#1 \: \middle| \: #2\right\}}
+\newcommand{\Set}[1]{\left\{#1\right\}}
+\newcommand{\given}{\: | \:}
+
+\newcommand{\ointerval}[2]{\left]#1, #2 \right[}
+\newcommand{\cinterval}[2]{\left[#1, #2\right]}
+\newcommand{\series}[2][0]{\sum\limits_{n = #1}^{+\infty}{#2}}
+
+% Document customization
+\renewcommand{\footruleskip}{15pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\renewcommand{\sectionmark}[1]{\markboth{{\bfseries Sezione \thesection: #1}}{}}
+
+\titlelabel{-- {\thetitle} -- \;}
+\fancyfoot[C]{-- {\thepage} --}
+\rhead{\leftmark}
+\lhead{}
+\setlength\headheight{15pt}

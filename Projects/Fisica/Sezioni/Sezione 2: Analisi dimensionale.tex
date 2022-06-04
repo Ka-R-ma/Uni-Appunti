@@ -1,0 +1,27 @@
+\documentclass[../Main/Appunti Fisica.tex]{subfiles}
+\begin{document}
+In fisica il concetto di dimensionale ha un significato particolare, con esso infatti si caratterizza la natura di una grandezza.
+\\ \\
+Si avrà spesso il bisogno di verificare la correttezza di un'equazione, in questi casi uno strumento utile è l'analisi dimensionale.
+Questa permette di verificare se tutti i membri di una certa equazione appartengano alla stessa dimensione.
+
+\begin{Example*}
+    \[
+        x(t) = x_{0} + v_{0}t + \frac{1}{2}at^{2}
+    \]
+    L'equazione sopra indicata è dimensionalmente consistente poiché, se analizzata dal punto di vista delle unità di misura si ha
+    \[
+        \abs{L} = \abs{L} + \frac{\abs{L}}{\abs{T}}\abs{T} + \frac{\abs{L}}{\abs{T}^{2}}\abs{T}^{2}
+    \]
+    Viceversa un'equazione del tipo
+    \[
+        x(t) = x_{0} + v_{0}t + \frac{1}{2}at^{3}
+    \]
+    risulta essere inconsistente dimensionalmente poiché, se analizzata dal punto di vista delle unità di misura si ha
+    \[
+        \abs{L} = \abs{L} + \frac{\abs{L}}{\abs{T}}\abs{T} + \frac{\abs{L}}{\abs{T}^{2}}\abs{T}^{3}
+    \]
+    il che è inconcepibile.
+\end{Example*}
+\end{document}
+\clearpage
