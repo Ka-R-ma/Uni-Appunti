@@ -1,0 +1,85 @@
+\documentclass[../../Main/Appunti Fisica.tex]{subfiles}
+\begin{document}
+Nella presente sezione, si riportato due modelli per la risoluzione di problemi risolvibili applicando le leggi di Newton.
+
+\subsubsection{Modello: punto materiale in equilibrio.}
+Si consideri un corpo in equilibrio sorretto da una fune, il cui schema di corpo libero è riportato nella figura di seguito.
+
+\begin{figure}[!h]
+    \centering
+    \begin{tikzpicture}[scale = 1, every node/.style={scale=0.75}]
+
+        % The mass
+        \node [scale = 2, circ, color = MidnightBlue] at (0, 0) {};
+        \node [anchor = east] (0, -0.125) {\(m\)};
+
+        % The forces
+        \draw[-stealth, color = MidnightBlue, thick] (0, 0) -- (0, 1);
+        \node [anchor = south east] at (0, 1) {\(\vb{T}\)};
+
+        \draw[-stealth, color = MidnightBlue, thick] (0, 0) -- (0, -1);
+        \node [anchor = north east] at (0, -1) {\(\vb{F_{p}}\)};
+
+    \end{tikzpicture}
+    \caption{}
+    \label{fig:4}
+\end{figure}
+
+Dalla \textit{Figura \ref{fig:4}} si osserva che:
+\begin{itemize}
+    \item sull'asse \textit{x} non vi sono forze, quindi
+          \[
+              \sum \vb{F_{x}} = 0
+          \]
+
+    \item sull'asse \textit{y} le forze agenti sono la forza peso e la tensione, quindi
+          \[
+              \sum \vb{F_{y}} = \vb{F_{p}} + \vb{T} = 0 \implies \vb{T} = - \vb{F_{p}}
+          \]
+\end{itemize}
+\clearpage
+
+\subsubsection{Modello: punto materiale sotto l'azione di forze esterne.}
+Si consideri un corpo, posto su una superficie orizzontale, soggetto ad una forza verso destra, il cui schema di corpo libero è riportato nella figura di seguito.
+\begin{figure}[!h]
+    \centering
+    \begin{tikzpicture}[scale = 1, every node/.style={scale=0.75}]
+
+        % The mass
+        \node [scale = 2, circ, color = MidnightBlue] at (0, 0) {};
+        \node [anchor = east] (0, -0.125) {\(m\)};
+
+        % The forces
+        \draw[-stealth, color = MidnightBlue, thick] (0, 0) -- (0, 1);
+        \node [anchor = south east] at (0, 1) {\(\vb{N}\)};
+
+        \draw[-stealth, color = MidnightBlue, thick] (0, 0) -- (0, -1);
+        \node [anchor = north east] at (0, -1) {\(\vb{F_{p}}\)};
+
+        \draw[-stealth, color = MidnightBlue, thick] (0, 0) -- (1, 0);
+        \node [anchor = south] at (1, 0) {\(\vb{F_{app}}\)};
+
+    \end{tikzpicture}
+    \caption{}
+    \label{fig:5}
+\end{figure}
+
+Supponendo di voler calcolare
+\begin{enumerate}
+    \item l'accelerazione del corpo;
+    \item la forza normale esercitata dalla superficie.
+\end{enumerate}
+si ha che
+\begin{enumerate}
+    \item lungo l'asse \textit{x}, l'unica forza è quella applicata, quindi
+          \[
+              \sum \vb{F_{x}} = \vb{F_{app}} = m\vb{a} \implies \vb{a} = \frac{\vb{F_{app}}}{m}
+          \]
+
+    \item lungo l'asse \textit{y}, le forze applicate sono la forza peso e la normale, poiché verticalmente non c'è accelerazione, segue
+          \[
+              \sum \vb{F_{y}} = \vb{N} + \vb{F_{p}} = 0 \implies \vb{N} = -\vb{F_{p}}
+          \]
+\end{enumerate}
+
+\end{document}

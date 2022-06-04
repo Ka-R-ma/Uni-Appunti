@@ -1,0 +1,51 @@
+\documentclass[../../Main/Appunti Fisica.tex]{subfiles}
+\begin{document}
+
+Si è precedentemente descritta la forza di attrito dinamico esercitata su un corpo in movimento su una superficie, trascurando però qualsiasi iterazione tra i due.
+\\ \\
+Se si considerano questi effetti si avrà che, la superficie o il mezzo attraversato producono una forza frenante \(\va{R}\).
+L'intensità \(\va{R}\) dipende dalla velocità del corpo, mentre la direzione sarà sempre opposta al moto.
+
+\begin{Remark*}
+    Poiché l'intensità di \(\va{R}\) può variare in modo, complesso si considerino i modelli dei paragrafi successivi.
+\end{Remark*}
+
+\subsubsection{Modello: Forza frenante proporzionale alla velocità del corpo.}
+Si consideri un corpo immerso in un liquido, o in un gas, da osservazioni sperimentali, segue
+\[
+    \vb{R} = -b\vb{v}
+\]
+ove \(b\) è una costante dipendente la mezzo attraversato.
+\begin{Example*}
+    Una sfera di massa \(m\) è lasciata cadere in un liquido. Supponendo che sulla sfera agiscano unicamente la forza \(\va{R} \text{e } \va{F_{g}}\), se ne studi il moto.
+    \\ \\
+    Dall'applicazione della seconda legge di Newton
+    \[
+        \sum \vb{F} = m\vb{g} -b\vb{} = m\vb{a} = m\dv{v}{t}
+    \]
+    risolvendo per \(\dd v/\dd t\), segue
+    \[
+        \dv{v}{t} = \vb{g} - \frac{b}{m}\vb{v}
+    \]
+\end{Example*}
+
+\subsubsection{Modello: Forza frenante proporzionale al quadrato della velocità.}
+Si consideri un corpo che si muove ad alta velocità, da osservazioni sperimentali segue
+\[
+    \vb{R} = DA\vb{v}^{2}\rho
+\]
+ove \(D\) è una costante empirica, \(\rho\) è la densità dell'aria, \(A\) l'area della sezione trasversale perpendicolare al moto.
+
+\begin{Example*}
+    Un corpo di massa \(m\) è lasciato cadere libero da uno stato di riposo.
+    segue
+    \[
+        \sum \vb{F} = m\vb{g} + \frac{1}{2}DA\vb{v}^{2}\rho = m\vb{a}
+    \]
+    da cui il modello dell'accelerazione è
+    \[
+        \vb{a} = \vb{g} - \left(\frac{DA\rho}{2m}\vb{v}^{2}\right)
+    \]
+\end{Example*}
+\clearpage
+\end{document}
