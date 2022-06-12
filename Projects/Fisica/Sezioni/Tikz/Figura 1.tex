@@ -15,6 +15,11 @@
         \draw (1.5, 1.5) parabola (0.5, 0.825);
         \draw (1.5, 1.5) parabola (3, 0);
 
+        % Theta
+        \draw (0.5, 0.5) arc (45:-15:0.5) (0.5, 0);
+        \draw (0.5, 0.5) arc (45:65:0.5);
+        \node [anchor = west] at (0.5, 0.5) {\(\theta\)};
+
         % Points of interest
         \node [circ, color = MidnightBlue] at (0, 0) {};
         \node (a) [anchor = north east] at (0, 0) {\textcircled{a}};
@@ -49,7 +54,6 @@
 
         \draw[-to, MidnightBlue, thick] (3, 0) -- (3.5, 0);
         \node [anchor = south] at (3.5, 0) {\(\vb{v_{x}}\)};
-
 
     \end{tikzpicture}
     \caption{Schema rappresentativo di moto del proiettile.}
