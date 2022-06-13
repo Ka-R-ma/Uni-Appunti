@@ -1,0 +1,33 @@
+\documentclass[../../Main/Appunti Fisica.tex]{subfiles}
+\begin{document}
+Si consideri una forza orizzontale verso destra applicata su un corpo.
+Se tale forza causa uno spostamento, il lavoro totale sarà
+\[
+    \vb{W_{TOT}} = \int{x_{i}}{x_{f}}{\sum \vb{Fx}}{x}
+\]
+%
+Dunque applicando Newton, segue
+\[\begin{aligned}
+        \vb{W_{TOT}} & = \int{x_{i}}{x_{f}}{\sum \vb{F_{x}}}{x} = \int{x_{i}}{x_{f}}{m\va{a}}{x}                 \\
+                     & = \int{x_{i}}{x_{f}}{m \dv{v}{t}}{x} = \int{x_{i}}{x_{f}}{m \dv{v}{x} \dv{x}{t}}{x}       \\
+                     & = \int{v_{i}}{v_{f}}{mv}{v}  = \frac{1}{2} m \vb{v_{f}}^{2} - \frac{1}{2} m\vb{v_{i}}^{2}
+    \end{aligned}\]
+%
+ove \(\vb{v_{i}}\) è la velocità del corpo a \(x_{i}\), metre \(\vb{v_{f}}\) quella in \(x_{f}\).
+\\ \\
+Si definisce la quantità \(\tfrac{1}{2} mv^{2}\), energia cinetica e la si indica con la lettera \(K\).
+\[
+    K \equiv \frac{1}{2} mv^{2}
+\]
+%
+Da cio segue
+\begin{equation}
+    \label{eq:1}
+    \vb{W} = K_{f} - K_{i} = \Delta K
+\end{equation}
+%
+L'Equazione \eqref{eq:1} è un'importante risultato noto come \textit{teorema dell'energia cinetica}.
+\begin{Theorem*}[dell'energia cinetica]
+    Quando si compie lavoro su un corpo, e ne consegue una variazione nel modulo della velocità, il lavoro totale è pari alla variazione di energia cinetica.
+\end{Theorem*}
+\end{document}

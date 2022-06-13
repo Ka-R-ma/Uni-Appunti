@@ -1,0 +1,63 @@
+\documentclass[../../Main/Appunti Fisica.tex]{subfiles}
+\begin{document}
+Si consideri una forza variabile applicata ad un corpo lungo l'asse \textit{x}.
+Da quanto detto fin'ora il lavoro non può dunque essere calcolato come \(\vb{W} = \vb{F} \Delta \vb{s} \cos \theta\), ma se si suppone di dividere lo spostamento in parti piccolissime,
+tali che \(\Delta s \to 0\), si avrà che approssimativamente la forza applicata è costante, segue dunque
+\[
+    \vb{W} \approxeq \vb{F_{x}} \Delta \vb{s}
+\]
+%
+Si supponga ora di suddividere la curva che rappresenta \(\vb{F_{x}}\), in un gran numero di intervalli, segue che il lavoro della forza è circa uguale a
+\[
+    \vb{W} \approxeq \sum\limits_{x_{i}}^{x_{f}}{\vb{F_{x}} \Delta \vb{s}}
+\]
+%
+Infine se si calcola il limite per \(\Delta \vb{s} \to 0\), sebbene i termini tendano all'infinito,
+la loro somma sarà uguale all'area compresa tra la curva rappresentante la forza è l'asse \textit{x}, cioè
+\[
+    \vb{W} = \lim\limits_{\Delta \vb{s} \to 0}{\sum\limits_{x_{i}}^{x_{f}}{\vb{F_{x}} \Delta \vb{s}}} = \int{x_{i}}{x_{f}}{\vb{F_{x}}}{x}
+\]
+\clearpage
+
+\subsubsection{Lavoro compiuto da una molla.}
+Si consideri la figura di seguito riportata.
+\begin{figure}[!h]
+    \centering
+    \begin{tikzpicture}
+
+        % Drawing surface
+        \draw [pattern = north east lines] (0, 0) -- (0, -3) -- (3.5, -3) -- (3.5, -2.5) -- (0.5, -2.5) -- (0.5, 0) -- (0, 0);
+
+        % Drawing the spring
+        \draw[decoration={aspect=0.3, segment length=3.2mm, amplitude=3mm,coil},decorate] (0.5, -2) -- (2, -2);
+
+        % Drawing the mass
+        \draw [MidnightBlue!80, fill=MidnightBlue!50] (2, -2.5) rectangle (3, -1.5);
+
+        % Drawing equilibrium point
+        \draw [dashed] (2.5, -1) -- (2.5, -3.5);
+        \node [anchor = north] at (2.5, -3.5) {\(x_{0}\)};
+
+    \end{tikzpicture}
+    \caption{Schema sistema massa-molla.}
+    \label{fig:6}
+\end{figure}
+
+Si si suppone di allungare, o eventualmente comprimere, la molla di un piccolo tratto rispetto la posizione di equilibrio \(x_{0}\),
+questa eserciterà una forza sul blocco che matematicamente è pari a
+\[
+    \vb{F_{s}} = -kx
+\]
+%
+ove \(k\) è una costante dipendente dalla molla.
+\\ \\
+Quanto detto è espresso più propriamente dalla legge di Hooke, di seguito riportata.
+\begin{Law*}[di Hooke]
+    La forza necessaria ad allungare o comprimere una molla, è proporzionale all'allungamento o alla comprensione subita dalla stessa.
+\end{Law*}
+
+Tornando al calcolo del lavoro, si consideri uno spostamento da una posizione \(x_{i}\) a \(x_{f}\), il lavoro compiuto dalla forza elastica è
+\[
+    \vb{W} = \int{x_{i}}{x_{f}}{-kx}{x} = \frac{1}{2}kx_{f}^{2} - \frac{1}{2}kx_{i}^{2}
+\]
+\end{document}

@@ -45,7 +45,7 @@
 
 %% Tikz and related
 \pgfplotsset{my style/.append style={axis x line=middle, axis y line=middle, xlabel={\(x\)}, ylabel={\(y\)}, axis equal}, compat=1.16}
-\usetikzlibrary{angles, arrows.meta, quotes, patterns, calc, automata, positioning}
+\usetikzlibrary{angles, arrows.meta, quotes, patterns, calc, automata, positioning, decorations.pathmorphing,patterns}
 \ctikzset{american, full diodes}
 
 \tikzset{
@@ -89,7 +89,7 @@ flipflop GEN/.style={flipflop, flipflop def={cu=1, tu=CLK, t2=D, t5=D}}
 
 % Redefinition of existing commands
 \let\oldInt\int
-\renewcommand{\int}[2]{\oldInt#1 \: {\dd#2}}
+\renewcommand{\int}[4]{\oldInt\limits_{#1}^{#2}{#3} \: {\dd#4}}
 
 \let\oldDet\det
 \let\oldDim\dim
