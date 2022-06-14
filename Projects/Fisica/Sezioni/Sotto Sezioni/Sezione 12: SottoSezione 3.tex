@@ -1,0 +1,44 @@
+\documentclass[../../Main/Appunti Fisica.tex]{subfiles}
+\begin{document}
+Si definisce urto l'evento in cui due, o più, particelle interagiscono per un breve istante tramite forze.
+Questi si suddividono in urti
+\begin{itemize}
+    \item \underline{elastici}: se l'urto non causa una variazione dell'energia cinetica;
+    \item \underline{anelastici}: se l'urto causa una variazione dell'energia cinetica;
+          \begin{itemize}
+              \item \underline{semplice}: se ne consegue che i corpi rimangono separati;
+              \item \underline{completamente anaelastico}: se ne consegue che i corpi rimangono uniti.
+          \end{itemize}
+\end{itemize}
+\clearpage
+
+\subsubsection{Urti completamente anelastici.}
+Si consideri Figura \ref{fig:7}.
+I due corpi urtano centralmente e rimanendo poi uniti.
+Poiché il sistema è isolato
+\[
+    m_{1}\va{v_{1}} + m_{2}\va{v_{2}} = (m_{1} + m_{2})\vb{v_{f}}
+\]
+da cui quindi
+\[
+    \vb{v_{f}} = \frac{m_{1}\va{v_{1}} + m_{2}\va{v_{2}}}{m_{1} + m_{2}}
+\]
+
+\subsubsection{Urti elastici.}
+Si consideri nuovamente Figura \ref{fig:7}.
+I due corpi urtano e dopo si allontanano con due velocità differenti.
+Assumendo l'urto anelastico, poiché per un infinitesimo i due corpi risultano uniti, sia \(\va{p}\) sia \(K\) sono costanti.
+Segue pertanto
+\begin{equation}\label{eq:2}
+    m_{1}\va{v_{1i}} + m_{2}\va{v_{2i}} = m_{1}\va{v_{1f}} + m_{2}\va{v_{2f}}
+\end{equation}
+da cui quindi
+\begin{equation}\label{eq:3}
+    m_{1}(\va{1f} - \va{v_{1i}}) = m_{2}(\va{2f} - \va{v_{2i}})
+\end{equation}
+Ponendo ora a sistema l'Equazioni \eqref{eq:2} e \eqref{eq:3}, segue
+\[\begin{gathered}
+        \va{v_{1f}} = \left(\frac{m_{1} - m_{2}}{m_{1} + m_{2}} \right) \va{v_{1i}} + \left(\frac{2 m_{2}}{m_{1} + m_{2}} \right) \va{v_{2i}}\\
+        \va{v_{2f}} = \left(\frac{2 m_{1}}{m_{1} + m_{2}}\right) \va{v_{1i}}  + \left(\frac{m_{1} - m_{2}}{m_{1} + m_{2}} \right) \va{v_{2i}}
+    \end{gathered}\]
+\end{document}

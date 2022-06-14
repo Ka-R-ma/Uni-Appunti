@@ -1,0 +1,32 @@
+\documentclass[../../Main/Appunti Fisica.tex]{subfiles}
+\begin{document}
+Si consideri un corpo soggetto ad una forza d'attrito.
+Questa poiché una forza, e poiché presente uno spostamento, fa lavoro.
+\\
+Si consideri la situazione in cui sul corpo agiscano un certo numero di forze, compresa quella d'attrito, segue che il lavoro è
+\[
+    \sum \vb{W} = \int{}{}{\sum \va{F_{e}} \cdot}{\va{s}} + \int{}{}{\va{F_{k}} \cdot}{\va{s}} = \int{}{}{\sum \va{F} \cdot}{\va{s}}
+\]
+ove \(\dd \va{s}\) è lo spostamento del corpo.
+\\ \\
+Applicando la seconda legge di Newton, segue
+\[\begin{aligned}
+        \vb{W} & = \int{}{}{m\va{a} \cdot}{\va{s}} = \int{}{}{m \dv{\va{v}}{t} \cdot}{\va{s}} \\
+               & = \int{}{}{m \dv{\va{v}}{t} \cdot \va{v}}{t}
+    \end{aligned}\]
+%
+ma
+\[
+    \dv{\va{v}}{t} \cdot \va{v} = \frac{1}{2} \dv{v^{2}}{t}
+\]
+da cui
+\[\begin{aligned}
+        \vb{W} & = \int{t_{i}}{t_{f}}{m\left( \frac{1}{2} \dv{v^{2}{t}}\right)}{t} = \frac{1}{2} m \int{v_{i}}{v_{f}}{}{v^{2}} \\
+               & = \frac{1}{2}m\vb{v_{f}^{2}} - \frac{1}{2} m\vb{v_{i}^{2}} = \Delta K
+    \end{aligned}\]
+%
+Ma \(\va{F_{k}}\) è opposta al moto, segue
+\[
+    \vb{W} = \Delta K + \int{}{}{\va{F_{k}}}{\va{s}}
+\]
+\end{document}
