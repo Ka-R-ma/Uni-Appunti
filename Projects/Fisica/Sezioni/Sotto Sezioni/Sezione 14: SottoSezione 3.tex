@@ -1,0 +1,67 @@
+\documentclass[../../Main/Appunti Fisica.tex]{subfiles}
+\begin{document}
+Altra categoria di moti oscillatori è quella dei pendoli, di cui si tratterà solo il \textit{pendolo semplice}.
+\\ \\
+Si consideri la figura di seguito riportata.
+\begin{figure}[!h]
+    \centering
+    \begin{tikzpicture}[scale = 1, every node/.style={scale=1}]
+        % Ceiling & string
+        \draw [pattern = north east lines] (0, 0.5) -- (0, 0) -- (3, 0) --(3, 0.5);
+        \draw (1.5, 0) -- (2.5, -2); % String position at a certain time t
+        \node [anchor = west] at (2, -1) {\(\va{T}\)};
+
+        \draw [dashed] (1.5, 0) -- (1.5, -2.625); % String position whe in equilibrium
+        \node [anchor = east] at (1.5, -1.315) {\(L\)};
+
+        % Theta
+        \draw (1.5, -0.5) arc(270:297.5:0.5);
+        \node [anchor = north west] at (1.5, -0.5) {\(\theta\)};
+
+        % Oscillatory path
+        \begin{scope}
+            \clip (0, -1.875) rectangle (3, -3);
+            \draw [densely dashed] (1.5, -1.5) circle (1.125);
+        \end{scope}
+        \node [anchor = east] at (1, -2) {\(\vb{s}\)};
+
+
+        % Mass
+        \filldraw [fill = MidnightBlue] (2.5, -2) circle (0.25);
+        \node [anchor = west] at (2.75, -2) {\(m\)};
+
+    \end{tikzpicture}
+    \caption{Schema modello pendolo semplice.}
+    \label{fig:8}
+\end{figure}
+
+Applicando la seconda legge di Newton, poiché l'unica forza opposta all'equilibrio è la componente della forza peso, segue
+\[
+    \vb{F} = -m\vb{g} \sin \theta = - m \dv[2]{\vb{s}}{t}
+\]
+ove \(\vb{s}\) è lo spostamento misurato lungo l'arco.\\
+Ma \(\vb{s} = L\theta\), e poiché \(L\) costante, segue
+\[
+    - m \dv[2]{\vb{s}}{t} = \dv[2]{\theta}{t} = - \frac{g}{L} \sin \theta
+\]
+
+\begin{Remark*}
+    Se \(\theta \le 10\) radianti, la precedente equazione si approssima come
+    \[
+        \dv[2]{\theta}{t} = - \frac{g}{L} \theta
+    \]
+    la cui soluzione è
+    \[
+        \theta = \theta_{MAX} \cos(\omega t + \phi)
+    \]
+    ove \(\theta_{MAX}\) è il massimo spostamento angolare dall'equilibrio, con
+    \[
+        \omega = \sqrt{\frac{\vb{g}}{L}}
+    \]
+    da cui infine
+    \[
+        \tau = \frac{2\pi}{\omega} = 2\pi \sqrt{\frac{L}{\vb{g}}}
+    \]
+\end{Remark*}
+
+\end{document}

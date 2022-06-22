@@ -1,0 +1,43 @@
+\documentclass[../../Main/Appunti Fisica.tex]{subfiles}
+\begin{document}
+Si consideri Figura \ref{fig:6}.
+Supponendo il piano privo di attrito, da osservazioni sperimentali si sa che se mossa da \(x_{0}\), la massa produrrà un moto oscillatorio da destra a sinistra.
+\\
+Dalla legge di Hooke, si ha che la forza risultante sul blocco sia
+\[
+    \vb{F_{k}} = -kx
+\]
+da cui applicando la seconda legge di Newton, segue
+\[
+    -kx = m\vb{x_{x}} \implies \vb{a_{x}} = -\frac{k}{m} x
+\]
+
+\subsubsection{Modello: punto materiale in moto armonico.}
+Volendo dare una descrizione matematica del moto, si osserva che la massa è soggetta ad una forza \(\vb{F_{k}}\), poiché \(\vb{a_{x}} = \dv*{v}{t}\) segue dunque
+\[
+    \dv[2]{x}{t} = -\frac{k}{m}x
+\]
+da cui ponendo \(\tfrac{k}{m} = \omega^{2}\), segue
+\begin{equation}\label{eq:4}
+    \dv[2]{x}{t} = -\omega^{2} x
+\end{equation}
+Soluzione all'equazione \eqref{eq:4}, risulta essere una funzione \(x(t)\) come di seguito descritta.
+\[
+    x(t) = A \cos(\omega t + \phi)
+\]
+ove \(A\) è detta ampiezza, \(\omega\) è nota come pulsazione e \(\phi\) è chiamata fase.
+\\ \\
+Si osserva infatti
+\begin{equation}\label{eq:5}
+    \dv{x}{t} = \va{v} = -\omega A \sin(\omega t + \phi)
+\end{equation}
+\begin{equation}\label{eq:6}
+    \dv[2]{x}{t} = \va{a} = -\omega^{2} A \cos(\omega t + \phi)
+\end{equation}
+%
+Infine se si indica con \(\tau\) il periodo di oscillazione, e con \(f\) la frequenza, segue
+\[\begin{gathered}
+    \tau = \frac{2\pi}{\omega} = 2\pi \sqrt{\frac{m}{k}} \\
+    f = \frac{1}{\tau} = \frac{\omega}{2\pi} \\
+\end{gathered}\]
+\end{document}
