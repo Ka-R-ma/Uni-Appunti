@@ -1,0 +1,30 @@
+\documentclass[../../Main/Appunti Fisica.tex]{subfiles}
+\begin{document}
+Per i gas, l'Equazione \eqref{eq:8} non è applicabile, poiché questi non hanno un volume proprio, bensì assumono quello del recipiente che li contiene.
+Proprio per tale ragione per i gas si utilizza quella una relazione, definita \textit{equazione di stato}, che lega volume, pressione e temperatura.
+
+\begin{Note*}
+    Tutti ragionamenti riguardanti i gas, nella presente sezione e in tutte quelle successive, terranno conto di gas perfetti, ossia a bassa densità.
+\end{Note*}
+
+Si consideri un gas contenuto in un cilindro, la cui pressione è variabile tramite un pistone.
+Supponendo che non vi siano perdite e la massa rimanga costante, dati sperimentali stabiliscono che
+\begin{itemize}
+    \item a \(T\) costante la pressione è inversamente proporzionale al volume;
+    \item a \(P\) costante il volume è direttamente proporzionale alla temperatura;
+    \item a \(V\) costante la pressione è direttamente proporzionale alla temperatura.
+\end{itemize}
+%
+In sintesi
+\[
+    PV = n R T
+\]
+ove \(n\) è il numero di moli, \(R\) è la costante dei gas perfetti pari a \SI[per-mode = fraction, unit-color = MidnightBlue]{8.314}{\joule \per \mole \cdot \kelvin}.
+\\
+Spesso risulta però comodo scrivere la precedente equazione come
+\[\begin{aligned}
+    PV = nRT &= \frac{N}{N_{a}}RT
+    &= NK_{B}T
+\end{aligned}\]
+ove \(K_{B}\) è la \textit{costante di Boltzmann}, pari a \SI[per-mode = fraction, unit-color = MidnightBlue]{1.38 e-23 }{\joule \per \kelvin}.
+\end{document}

@@ -1,0 +1,41 @@
+\documentclass[../../Main/Appunti Fisica.tex]{subfiles}
+\begin{document}
+Ogni corpo, sia esso solido o liquido, è accomunato da una caratteristica comune: all'aumentare della temperatura, aumenta il volume dello stesso.
+Tale fenomeno in fisica è definito \textit{dilatazione termica}.
+\\ \\
+Si consideri un corpo di lunghezza \(L_{i}\), a una certa temperatura.
+Si supponga che questi si allunghi di un tratto \(\Delta L\), a causa di una variazione di temperatura \(\Delta T\).
+\\ \\
+\`E possibile stabilire il valore di \(\Delta L\) come
+\[
+    \Delta L = \alpha L_{i} \Delta T
+\]
+ove \(\alpha\) è definito \textit{coefficiente di dilatazione lineare}.
+\[
+    \alpha \equiv \frac{\Delta L / L_{i}}{\Delta T}
+\]
+Poiché le dimensioni lineari del corpo variano, al variare della temperatura, segue che variano di conseguenza area e volume.
+\begin{equation}\label{eq:7}
+    \Delta V = \beta V_{i} \Delta T
+\end{equation}
+ove \(\beta\) è definito \textit{coefficiente di dilatazione volumetrico}.
+\\ \\
+Per ricavare una relazione tra \(\alpha \text{e} \beta\), si assume che il primo sia lo stesso in ogni direzione.
+Considerando dunque un corpo di dimensioni \(l, h, w\), il volume di questi sarà \(V_{i} = lhw \alpha\).
+Supponendo una variazione di temperatura \(T_i + \Delta T\), segue che il volume sarà \(V_{i} + \Delta V\).
+\[\begin{aligned}
+        V_{i} + \Delta V & = (l + \Delta l)(h + \Delta h)(w + \Delta w)                                  \\
+                         & = (l + \alpha l \Delta T)(h + \alpha h \Delta T)(w + \alpha w \Delta T)       \\
+                         & = lwh(1 + \alpha \Delta T)^{3}                                                \\
+                         & = V_{i}[1 + 3\alpha\Delta T + 3(\alpha \Delta T)^{2} + (\alpha \Delta T)^{3}]
+    \end{aligned}\]
+ma per \(\Delta T < 100\) gradi si ha che \(\alpha \Delta T << 1\), conseguentemente i termini \(3(\alpha \Delta T)^{2}\) e \((\alpha \Delta T)^{3}\) sono trascurabili.
+Pertanto
+\begin{equation}\label{eq:8}
+    \Delta V = 3 \alpha V_{i} \Delta T
+\end{equation}
+ma da ciò segue
+\[
+    \beta \simeq 3\alpha
+\]
+\end{document}
