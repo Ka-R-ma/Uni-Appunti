@@ -1,0 +1,36 @@
+\documentclass[../../Main/Appunti Fisica.tex]{subfiles}
+\begin{document}
+Le trasformazioni termodinamiche si suddividono in
+\begin{itemize}
+    \item \underline{adiabatiche}: l'energia non è scambiata come calore, cioè \(Q = 0\).
+          Per il primo principio segue
+          \[
+              \Delta E_{int} = \vb{W}
+          \]
+
+    \item \underline{isobare}: i valori di lavoro e calore sono entrambi diversi da zero.
+          Segue che il lavoro sul gas è
+          \[
+              \vb{W} = -P \Delta V
+          \]
+          ove \(P\) è la pressione del gas, costante per l'intera trasformazione.
+
+    \item \underline{isocore}: il volume del gas non varia, segue che il lavoro è nullo.
+          Per il primo principio segue
+          \[
+              \Delta E_{int} = Q
+          \]
+
+    \item \underline{isoterma}: la temperatura rimane costante.
+\end{itemize}
+
+\subsubsection{Espansione isoterma di un gas perfetto.}
+Si consideri Figura \ref{fig:9}.
+Dall'applicazione dell'Equazione \eqref{eq:9}, segue
+\[\begin{aligned}
+    \vb{W} &= \int{V_{i}}{V_{f}}{-\vb{P}}{V} = \int{V_{i}}{V_{f}}{- \frac{nRT}{V}}{V}\\
+    &= - nRT \int{V_{i}}{V_{f}}{\frac{1}{V}}{V} \\
+    &= - nRT \ln(V)_{V_{i}}^{V_{f}} \\
+    &= - nRT \ln\left(\frac{V_{i}}{V_{f}}\right)
+\end{aligned}\]
+\end{document}
