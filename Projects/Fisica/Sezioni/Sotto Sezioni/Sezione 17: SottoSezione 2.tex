@@ -1,0 +1,58 @@
+\documentclass[../../Main/Appunti Fisica.tex]{subfiles}
+\begin{document}
+Si consideri un gas ì che subisce una trasformazione a temperatura costante.
+\\ \\
+Poiché \(\Delta T\) è la stessa in ogni percorso, segue che \(\Delta E_{int}\) è anch'essa la medesima indipendentemente dal percorso scelto.
+Pertanto a variare sono \(\vb{W} \text{e} Q\).
+% TODO: Check
+Per ovviare a questo problema, si definiscono i \textit{calori specifici molari}, associati a una trasformazione isocora e a una isovolumica.
+\[\begin{gathered}
+        Q \equiv n C_{v} {\Delta T} \quad \text{isovolumica} \\
+        Q \equiv n C_{p} {\Delta T} \quad \text{isocora} \\
+    \end{gathered}\]
+%
+Si consideri il caso di un gas monoatomico.
+Se a questi si fornisce calore, mantenuto a volume costante, ciò comporterà una variazione di energia cinetica.
+\begin{equation}\label{eq:10}
+    K_{TOT} = N K_{B} T = \frac{3}{2} n R T = E_{int}
+\end{equation}
+%
+Si consideri ora che il gas ceda calore, allora, poiché il volume è costante, \(\vb{W} = 0\).
+Segue, dal primo principio della termodinamica, che
+\[
+    Q = \Delta E_{int} \\
+\]
+\vspace{-20pt}
+\begin{equation}\label{eq:11}
+    \Delta E_{int} = n C_{v} {\Delta T}
+\end{equation}
+%
+Se \(C_{v}\) è costante
+\[
+    E_{int} = n C_{v} T
+\]
+%
+Per variazioni infinitesimali
+\[
+    V_{v} = \dv{E_{int}}{T}
+\]
+da cui sostituendo all'Equazione \eqref{eq:10}, segue
+\[
+    C_{v} = \frac{3}{2} R
+\]
+%
+Si consideri ora il caso di una trasformazione a pressione costante.
+Poiché il calore dev'essere fornito, \(Q = n C_{p} {\Delta T}\), cioè a variare è il volume, quindi \(\vb{W} = \vb{P} {\Delta V}\).\\
+Dal primo principio segue quindi
+\begin{equation}\label{eq:12}
+    E_{int} = n C_{p} {\Delta T} - P {\Delta V}
+\end{equation}
+ma \(PV = nRT \implies \vb{P}{\Delta V} = nR{\Delta T}\), da cui sostituendo all'Equazioni \eqref{eq:11}, \eqref{eq:12}, segue
+\[nC_{v}{\Delta T} = nC_{p}{\Delta T} - nR{\Delta T}\]
+%
+Da ciò segue quindi
+\[\begin{gathered}
+    C_{p} - C_{v} = R \\
+    C_{p} = \frac{5}{2} R \\\
+\end{gathered}\]
+\end{document}

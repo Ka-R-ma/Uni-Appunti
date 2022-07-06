@@ -1,0 +1,37 @@
+\documentclass[../../Main/Appunti Fisica.tex]{subfiles}
+\begin{document}
+Si consideri un gas che compia una trasformazione adiabatica infinitesima, con variazione \(\dd V\) di volume e una variazione \(\dd T\) di temperatura.
+Segue \(\vb{W} = \vb{P} \dd V\).\\
+Poiché unicamente dipendente dalla temperatura, si ha che
+\[
+    \dd E_{int} = n C_{v} \dd T
+\]
+è uguale ad un processo isovolumico che avviene alle stesse temperature.
+\\ \\
+Per il primo principio, segue
+\[
+    \dd E_{int} = n C_{v} \dd T = - \vb{P} \dd V
+\]
+%
+Differenziando l'equazione di stato per i gas perfetti, segue
+\[\begin{gathered}
+    \vb{P} \dd V + V \dd \vb{P} = nR\dd T \\
+    %TODO: add equation
+\end{gathered}\]
+Ponendo \(R = C_{p} - c_{v}\), segue che dividendo per \(\vb{P}V\)
+\[\begin{aligned}
+    \frac{\dd V}{V} + \frac{\dd P}{P} &= - \frac{C_{p} - C_{v}}{C_{v}} \frac{\dd V}{V}
+    &= \frac{\dd}{V} (1 - y)
+\end{aligned}\]
+ove \(y = C_{p} / C_{v}\)
+\\ \\
+Integrando l'ultima equazione, segue
+\[
+    \ln \vb{P} + y \ln V = costante
+\]
+il che equivale a
+\[
+    \vb{P}V^{y} = costante 
+\]
+\end{document}
+\clearpage

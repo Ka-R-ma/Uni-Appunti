@@ -1,0 +1,35 @@
+\documentclass[../../Main/Appunti Fisica.tex]{subfiles}
+\begin{document}
+Si consideri un'area dello spazio in cui è presente una carica distribuita \(q\), si consideri di tale carica una porzione \(\Delta q\).
+Calcolando il campo elettrico di tale carica, segue
+\[
+    \Delta \va{E} = \frac{K_{C} \Delta q}{r^{2}} \vu{r}
+\]
+ove \(r\) è la distanza tra \(\Delta q\) è un punto qualsiasi.\\
+Per cui il campo elettrico totale in un punto \(P\) è
+\[
+    \va{E} \approx K_{C} \sum\limits_{i} \frac{\Delta q_{i}}{r_{i}^{2}} \vu{r}
+\]
+da cui se \(\Delta q_{i} \to 0\), segue
+\[
+    \va{E} =  \lim\limits_{\Delta q_{i} \to 0} \sum\limits_{i} K_{C} \frac{\Delta q_{i}}{r_{i}^{2}} \vu{r} = K_{C} \frac{\dd q}{r^{2}} \vu{r}
+\]
+%
+Per comodità nei calcoli si usa la seguente notazione.
+\begin{Notation*}
+    \[\begin{gathered}
+            \rho \equiv \frac{Q}{V}    \\
+            \sigma \equiv \frac{Q}{A}  \\
+            \lambda \equiv \frac{Q}{l} \\
+        \end{gathered}\]
+\end{Notation*}
+le quali sono rispettivamente \textit{densità di carica di volume, di superficie, di linea}, \(Q\) è una carica distribuita.
+\\ \\
+Nel caso di cariche infinitesimal, valgono
+\[\begin{gathered}
+    \dd q = \rho \dd V \\
+    \dd q = \sigma \dd A \\
+    \dd q = \lambda \dd l \\
+\end{gathered}\]
+\end{document}
+\clearpage

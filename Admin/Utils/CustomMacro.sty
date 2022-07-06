@@ -29,6 +29,7 @@
 \newtheorem*{Solution*}{Svolgimento}
 \newtheorem*{Exercise*}{Esercizio}
 \newtheorem*{Example*}{Esempio}
+\newtheorem*{Notation*}{Notazione}
 
 \theoremstyle{Remark*}
 \newtheorem*{Remark*}{Osservazione}
@@ -36,7 +37,7 @@
 \newtheorem*{Note*}{Nota}
 
 \theoremstyle{Proof*}
-\newtheorem*{Proof}{Dimostrazione}
+\newtheorem*{Proof*}{Dimostrazione}
 
 % Packages Option
 %% Math encviroment color
@@ -45,7 +46,7 @@
 
 %% Tikz and related
 \pgfplotsset{my style/.append style={axis x line=middle, axis y line=middle, xlabel={\(x\)}, ylabel={\(y\)}, axis equal}, compat=1.16}
-\usetikzlibrary{angles, arrows.meta, quotes, patterns, calc, automata, positioning, decorations.pathmorphing,patterns}
+\usetikzlibrary{angles, arrows.meta, quotes, patterns, calc, automata, positioning, decorations.pathmorphing,patterns, 3d}
 \ctikzset{american, full diodes}
 
 \tikzset{
@@ -89,7 +90,9 @@ flipflop GEN/.style={flipflop, flipflop def={cu=1, tu=CLK, t2=D, t5=D}}
 
 % Redefinition of existing commands
 \let\oldInt\int
+\let\oldOInt\oint
 \renewcommand{\int}[4]{\oldInt\limits_{#1}^{#2}{#3} \: {\dd#4}}
+\renewcommand{\oint}[4]{\oldOInt\limits_{#1}^{#2}{#3} \: {\dd#4}}
 
 \let\oldDet\det
 \let\oldDim\dim

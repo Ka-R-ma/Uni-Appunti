@@ -1,0 +1,36 @@
+\documentclass[../,,/Main/Appunti Fisica.tex]{subfiles}
+\begin{document}
+Si supponga un gas a volume iniziale \(V_{i}\), libero di occupare un volume \(V_{f}\).
+Supponendo \(V_{m}\) la massa delle singole particelle, il numero di possibili locazioni \(\omega\) delle molecole è
+\[
+    \omega_{i} = \frac{V_{i}}{V_{m}}
+\]
+%
+Trascurando la possibilità che due particelle siano nella medesima posizione, \(N\) molecole potranno trovarsi in \(\omega_{i}^{N}\) stati diversi.
+Cioè
+\[
+    \omega_{i}^{N} = \left( \frac{V_{i}}{V_{m}} \right)^{N} = \Omega_{i}
+\]
+analogamente il numero di micro-stati finali sara dato da
+\[
+    \omega_{i}^{N} = \left( \frac{V_{f}}{V_{m}} \right)^{N} = \Omega_{f}
+\]
+%
+Calcolando ora il rapporto tra i micro-stati finali e iniziali, segue
+\[
+    \frac{\Omega_{f}}{\Omega_{i}} = \left( \frac{V_{f}}{V_{i}} \right)^{N}
+\]
+da cui moltiplicando per \(K_{B}\) è calcolandone il logaritmo, segue
+\[
+    K_{B} \ln\left( \frac{\Omega_{f}}{\Omega_{i}} \right) = n N_{a} K_{B} \ln \left( \frac{V_{f}}{V_{i}} \right) = n R \ln \left( \frac{V_{f}}{V_{i}} \right)
+\]
+segue
+\[
+    S_{f} - S_{i} =  n R \ln \left( \frac{V_{f}}{V_{i}} \right)
+\]
+da cui si si ha la seguente definizione di entropia.
+\[
+    S = K_{b} \ln \Omega
+\]
+\end{document}
+\clearpage
