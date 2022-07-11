@@ -1,0 +1,33 @@
+\documentclass[../../Main/Appunti Fisica.tex]{subfiles}
+\begin{document}
+Si consideri un reticolo di atomi liberi.
+Quando si applica un campo elettrico, tali elettroni seguiranno una deriva nella stessa direzione del campo ma con verso opposto,
+con un velocità \(\vb{v_{d}}\) molto piccola.
+\\ \\
+Considerando le seguenti ipotesi, si deriverà il modello.
+\begin{enumerate}
+    \item Il moto dopo l'urto è indipendente dal moto antecedente lo stesso.
+    \item L'energia tra un urto e l'altro di un elettrone nel campo viene interamente ceduta agli atomi del conduttore quando l'elettrone urta con essi.
+\end{enumerate}
+
+Quando l'elettrone di massa \(m_{e}\) e carica \(- e\) è soggetto ad un campo elettrico \(\va{E}\), risente di una forza \(\va{F} = - e \va{E}\), da Newton segue
+\[
+    \va{a} = \frac{\sum \vb{F}}{m} = \frac{q \va{E}}{m_{e}} \qquad \text{con} q = -e
+\]
+%
+Poiché \(\va{E}\) è costante, dopo l'urto se \(\va{v_{i}}\) è la velocità immediatamente successiva allo stesso, la velocità finale sara
+\[
+    \va{v_{f}} = \va{v_{i}} + \va{a} t = \va{v_{i}} + \frac{q \va{E}}{m_{e}} t
+\]
+ma poiché tale velocità si ripete in un periodo \(\tau\), si ha
+\[
+    \mv{v_{f}} = \va{v_{d}} = \frac{q \va{E}}{m_{e}} \tau
+\]
+dunque
+\[\begin{gathered}
+        J = nq\vb{v_{d}} = \frac{nq^{2}\vb{E}}{m_{e}}\tau \\
+        \sigma = \frac{nq^{2}}{m_{e}}\tau \\
+        \rho = \frac{1}{\sigma} =  \frac{m_{e}}{nq^{2}\tau} \\
+    \end{gathered}\]
+\end{document}
+\clearpage

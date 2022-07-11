@@ -1,0 +1,46 @@
+\documentclass[../Main/Appunti Fisica.tex]{subfiles}
+\begin{document}
+Si faccia l'ipotesi di alcune cariche che si muovono perpendicolarmente ad una superficie di area \(A\).
+Se si definisce \(\Delta Q\) la carica che attraversa la superficie in un tempo \(\Delta t\), allora
+\[
+    \mv{I} = \frac{\Delta Q}{\Delta t}
+\]
+da cui
+\[
+    I = \frac{\dd Q}{\dd t}
+\]
+
+Nel SI, la corrente è misurata in Ampere, (\SI[unit-color = MidnightBlue]{}{\ampere}).
+\begin{center}
+    \SI[unit-color = MidnightBlue, per-mode = fraction]{1}{\ampere \equiv \coulomb \per \second}
+\end{center}
+
+\subsubsection{Modello microscopico della corrente.}
+Si consideri un elemento conduttore di lunghezza \(\Delta x\), il cui volume sia \(\Delta x A\). Siano \(n\) il numero di portatori di carica per unita di volume,
+allora
+\[
+    \Delta Q = (n A \Delta x) q
+\]
+ove \(q\) è la carica di ciascun portatore di carica.\\
+Se se ciascun portatore si muove a velocità \(\vb{v_{d}}\), poiché \(\Delta x = \vb{v_{d}} \Delta t\), segue
+\[
+    \Delta Q = (n A \vb{v_{d}} \Delta t) q
+\]
+da cui segue
+\[
+    \mv{I} = \frac{\Delta Q}{\Delta t} = n A \vb{v_{d}} q
+\]
+\clearpage
+
+\subsection{Resistenza.}
+\subfile{../Sezioni/Sotto Sezioni/Sezione 23: SottoSezione 1.tex}
+
+\subsection{Modello di conduzione elettrica.}
+\subfile{../Sezioni/Sotto Sezioni/Sezione 23: SottoSezione 2.tex}
+
+\subsection{Resistenza e temperatura.}
+\subfile{../Sezioni/Sotto Sezioni/Sezione 23: SottoSezione 3.tex}
+
+\subsection{Potenza elettrica.}
+\subfile{../Sezioni/Sotto Sezioni/Sezione 23: SottoSezione 4.tex}
+\end{document}

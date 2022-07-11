@@ -1,0 +1,103 @@
+\documentclass[../../Main/Apputni Fisica.tex]{subfiles}
+\begin{document}
+Si definisce circuito RC, un circuito del tipo quello della figura di seguito riportata.
+\begin{figure}[!h]
+    \centering
+    \begin{tikzpicture}[scale = 1, every node/.style={scale=0.75}]
+
+        % Circuit 
+        \node (source) [battery1shape, rotate = -90] at (0, 0) {};
+        \node [anchor = east] at (-0.5, 0) {\(\varepsilon\)};
+
+        \node (a) [ocirc] at ($(source.left) + (1.5, 0.5)$) {};
+        \node [anchor = south] at ($(source.left) + (1.5, 0.5)$) {\(a\)};
+
+        \node (b) [ocirc] at ($(a) + (0.25, -0.5)$) {};
+        \node [anchor = east] at ($(a) + (0.25, -0.5)$) {\(b\)};
+
+        % Cables
+        \draw (source.left) to [short] ($(source.left) + (0, 0.5)$)
+        ($(source.left) + (0, 0.5)$) to (a);
+
+        \draw ($(a) + (0.5, 0)$) to [short] ($(a) + (1.5, 0)$)
+        ($(a) + (1.5, 0)$) to [C] ($(a) + (1.5, -1)$)
+        ($(a) + (1.5, -1)$) to [R] ($(a) + (1.5, -2)$);
+
+        \draw (source.right) to [short] ($(source.right) + (0, -1.15)$)
+        ($(source.right) + (0, -1.15)$) to ($(a) + (1.5, -2)$);
+
+        \draw (b) -- ($(b) + (0, -1.495)$);
+
+        \draw ($(a) + (0.125, -0.25)$) to  ($(a) + (0.5, 0)$);
+
+    \end{tikzpicture}
+    \caption{Circuito RC.}
+    \label{fig:15}
+\end{figure}
+\clearpage
+
+\subsubsection{Carica di un condensatore.}
+Si consideri Figura \ref{fig:15}.
+Dalla seconda legge di Kirchhoff, supponendo che il circuito sia chiuso con l'interruttore in \(a\), segue
+\begin{equation}\label{eq:18}
+    \varepsilon - IR - \frac{q}{C} = 0
+\end{equation}
+Supponendo che \(t = 0\) e il condensatore sia scarico, si può calcolare la corrente massima \(I_{i}\) come
+\[
+    I_{i} = \frac{\varepsilon}{R}
+\]
+%
+Dall'Equazione \eqref{eq:18}, trascorso un tempo sufficientemente lungo, la corrente non circola più nel circuito, segue
+\[
+    Q = C \varepsilon
+\]
+%
+Analiticamente segue
+\[
+    I = \dv{q}{t} = \frac{\varepsilon}{R} - \frac{q}{RC}
+\]
+%
+Da quest'equazione si ricava una relazione per \(q\), infatti
+\[
+    \dv{q}{t} = \frac{\varepsilon C}{RC} - \frac{q}{RC} = - \frac{q - C \varepsilon}{RC}
+\]
+moltiplicando per \(dv{t}\) e dividendo per \(q - C \varepsilon\), segue integrando
+\[\begin{aligned}
+        \int{0}{q}{\frac{1}{q - C \varepsilon}}{q} & = - \frac{1}{RC} \int{0}{t}{}{t}                                                \\
+                                                   & = \ln \left( \frac{q - C \varepsilon}{- C \varepsilon} \right) = - \frac{t}{RC}
+    \end{aligned}\]
+quindi
+\[
+    q(t) = C \varepsilon \left(1 - e^{-t/RC} \right) = Q \left(1 - e^{-t/RC} \right)
+\]
+da ciò, derivando, segue
+\[
+    I(t) = \frac{\varepsilon}{R} e^{-t/RC} = \frac{\varepsilon}{R} e^{-t/\tau}
+\]
+ove \(\tau = RC\).
+\clearpage
+
+\subsubsection{Scarica di un condensatore.}
+Si consideri nuovamente Figura \ref{fig:15}, supponendo che il condensatore sia carico e il circuito sia chiuso in \(b\).
+\\ \\
+Considerando la maglia contenente condensatore e resistore, segue
+\[
+    -\frac{q}{C} - IR = 0
+\]
+ponendo \(I = \dd q / \dd t\), segue
+\[\begin{gathered}
+        \frac{q}{C} = - R \dv{q}{t}    \\
+        \frac{\dd q}{q} = \frac{1}{RC} \dd t
+    \end{gathered}\]
+%
+Integrando segue pertanto
+\[\begin{gathered}
+        \int{0}{q}{\frac{1}{q}}{q} = \frac{1}{RC} \int{0}{t}{}{t}    \\
+        q(t) = Q e^{-t/RC} = Q e^{-t/\tau}
+    \end{gathered}\]
+da ciò derivando nuovamente, segue
+\[
+    I(t) = - \frac{Q}{RC} e^{-t/RC} = \frac{Q}{RC} e^{-t/\tau}
+\]
+\end{document}
+\clearpage

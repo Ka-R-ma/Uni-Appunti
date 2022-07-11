@@ -1,0 +1,50 @@
+\documentclass[../../Main/Appunti Fisica.tex]{subfiles}
+\begin{document}
+Si consideri il circuito della figura di seguito riportata.
+\begin{figure}[!h]
+    \centering
+    \begin{tikzpicture}[scale = 1, every node/.style={scale=0.75}]
+
+        % Circuit
+        \node (source) [battery1shape, rotate = -90] at (0, 0) {};
+
+        \draw (source.left) to [short] ($(source.left) + (0, 0.5)$)
+        ($(source.left) + (0, 0.5)$) to [short] ($(source.left) + (2, 0.5)$)
+        ($(source.left) + (2, 0.5)$) to [R] ($(source.right) + (2, -0.5)$)
+        ($(source.right) + (2, -0.5)$) to [short] ($(source.right) + (0, -0.5)$)
+        ($(source.right) + (0, -0.5)$) to [short] (source.right);
+
+        % Points of interest
+        \node (a) [circ, color = MidnightBlue] at ($(source.right) + (0, -0.25)$) {};
+        \node [anchor = east] at ($(source.right) + (0, -0.25)$) {\(\textcircled{a}\)};
+
+        \node (b) [circ, color = MidnightBlue] at ($(source.left) + (0, 0.25)$) {};
+        \node [anchor = east] at ($(source.left) + (0, 0.25)$) {\(\textcircled{b}\)};
+
+        \node (c) [circ, color = MidnightBlue] at ($(source.right) + (2, -0.375)$) {};
+        \node [anchor = west] at ($(source.right) + (2, -0.375)$) {\(\textcircled{c}\)};
+
+        \node (d) [circ, color = MidnightBlue] at ($(source.left) + (2, 0.375)$) {};
+        \node [anchor = west] at ($(source.left) + (2, 0.375)$) {\(\textcircled{d}\)};
+
+        % Current
+        \node (I) [anchor = south] at (1, 0.625) {\(\va{I}\)};
+    \end{tikzpicture}
+    \caption{Circuito con resistenza.}
+    \label{fig:14}
+\end{figure}
+
+Quando una quantità di corrente \(Q\), passa da \textcircled{a} a \textcircled{b}, si ha una variazione \(\Delta U = Q \Delta V\),
+la quale viene successivamente persa nel passaggio da \textcircled{c} a \textcircled{d}.
+\[
+    \dv{U}{t} = \dv{}{t}(Q \Delta V) = \dv{Q}{t}\Delta V  = I \Delta V
+\]
+da cui
+\[
+    \vb{P} = I \Delta V
+\]
+ma \(\Delta V = I R\), allora
+\[
+    \vb{P} = I^{2}R
+\]
+\end{document}
