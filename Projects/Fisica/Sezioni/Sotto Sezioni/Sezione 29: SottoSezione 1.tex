@@ -1,0 +1,32 @@
+\documentclass[../../Main/Appunti Fisica.tex]{subfiles}
+\begin{document}
+Si consideri il processo di carica di un condensatore.
+Quando una corrente attraversa l'armatura positiva, cambia la carica su di essa, ma la corrente non attraversa lo spazio tra le due armature.
+%TODO: Figura 34:1 libro
+
+Si considerino dunque superfici \(S_{1}, S_{2}\) contornate da un percorso \(P\).
+\\ \\
+Da Ampere segue che
+\begin{itemize}
+    \item in \(S_{1}\)
+          \[
+              \oint{}{}{\va{B} \cdot}{\va{s}} = \mu_{0}I
+          \]
+          poiché percorsa da corrente.
+
+    \item in \(S_{2}\)\[
+              \oint{}{}{\va{B} \cdot}{\va{s}} = 0
+          \]
+          poiché non attraversa da alcuna corrente.
+\end{itemize}
+Ma ciò è una contraddizione, poiché si avrebbe in tal modo una discontinuità di corrente.
+\\ \\
+Maxwell risolse tale problema postulando che, all'equazione di Ampere andasse aggiunta la \textit{corrente di spostamento} \(I_{s}\), definita come
+\[
+    I_{s} \equiv \varepsilon_{0} \dv{\Phi_{E}}{t}
+\]
+Da cui la legge di Ampere generalizzata è
+\[
+    \oint{}{}{\va{B} \cdot}{\va{s}} = \mu_{0}I + \varepsilon_{0}\mu_{0}\dv{\Phi_{E}}{t}
+\]
+\end{document}

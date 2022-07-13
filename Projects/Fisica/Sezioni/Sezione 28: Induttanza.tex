@@ -1,0 +1,56 @@
+\documentclass[../Main/Appunti Fisica.tex]{subfiles}
+\begin{document}
+Si consideri la figura di seguito riportata.
+\begin{figure}[!h]
+    \centering
+    \begin{tikzpicture}[scale = 1, every node/.style={scale=1}]
+
+        \node (source) [battery1shape, rotate = -90] at (0, 0) {};
+        \node [anchor = east] at (-0.25, 0) {\(\varepsilon\)};
+
+        \draw (source.left) to ($(source.left) + (0, 0.75)$) to ($(source.left) + (2, 0.75)$) to [ccgsw] ($(source.right) + (2, -0.75)$) to [R]
+        ($(source.right) + (0, -0.75)$) to (source.right);
+
+        \draw [-stealth, thick] (1.5, -1.5) -- (0.5, -1.5);
+        \node (I) [anchor = north] at (1, -1.5) {\(I\)};
+
+    \end{tikzpicture}
+    \caption{Circuito soggetto ad induzione.}
+    \label{fig:20}
+\end{figure}
+
+Quando l'interruttore è chiuso la corrente non passa istantaneamente da 0 a \(\varepsilon / R\).
+Infatti se si analizza applicando Faraday, non appena la corrente aumenta si ha una variazione del flusso magnetico.
+Tale \fem produce una corrente indotta opposta alla corrente fornita dalla batteria.
+\\ \\
+Poiché tale fenomeno è generato dal circuito stesso, si definisce \textit{autoinduzione}.
+\\ \\
+Da Faraday segue dunque
+\begin{equation}\label{eq:19}
+    \varepsilon_{r} = L \dv{I}{t}
+\end{equation}
+ove \(L\) è una costante di proporzionalità, detta \textit{induttanza}, dipendente dalle caratteristiche fisiche e geometriche della spira stessa.
+\\ \\
+Si consideri una spira composta da \(N\) spire, segue
+\[
+    L = \frac{N \Phi_{B}}{I}
+\]
+posto \(\Phi_{B}\) lo stesso per ogni spira ed \(L\) induttanza dell'intera spira.
+\\ \\
+Dall'equazione \eqref{eq:19}
+\[
+    L = - \frac{\varepsilon}{\dd \Phi_{B} / \dd t}
+\]
+
+Nel SI, l'induttanza è misurata in Henry, (\SI[unit-color = MidnightBlue]{}{\henry}).
+\begin{center}
+    \SI[unit-color = MidnightBlue, per-mode = fraction]{1}{\henry \equiv \volt \cdot \second \per \ampere}
+\end{center}
+\clearpage
+
+\subsection{Circuiti RL.}
+\subfile{../Sezioni/Sotto Sezioni/Sezione 28: SottoSezione 1.tex}
+
+\subsection{Energia di un campo magnetico.}
+\subfile{../Sezioni/Sotto Sezioni/Sezione 28: SottoSezione 2.tex}
+\end{document}

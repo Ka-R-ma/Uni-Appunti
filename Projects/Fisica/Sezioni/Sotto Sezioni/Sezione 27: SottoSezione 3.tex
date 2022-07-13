@@ -1,0 +1,31 @@
+\documentclass[../../Main/Appunti Fisica.tex]{subfiles}
+\begin{document}
+\begin{Fact*}
+    Un campo elettrico indotto non è conservativo.
+\end{Fact*}
+
+Si consideri una spira circolare di raggio \(r\), immersa in un campo elettrico uniforme, perpendicolare alla spira.
+\\ \\
+In accordo con Faraday, se il campo magnetico varia, \(\varepsilon = \dd \Phi_{B} / \dd t\), ma ciò implica la presenza di un campo \(\va{E}\) nella spira,
+tangente a ogni punto della stessa.
+\\ \\
+Calcolando ora il lavoro necessario affinché un carica \(q\) compia un'intero giro della spira, si ha
+\[
+    \vb{W} = q \varepsilon = q \vb{E} 2 \pi r
+\]
+ma \(q \va{E}\) è la forza a cui è soggetta la carica, allora
+\[
+    \vb{E} = \frac{\varepsilon}{2 \pi r}
+\]
+%
+Dunque, poiché per una spira circolare \(\Phi_{B} = \vb{B} A = \vb{B} \pi r^{2}\), segue
+\[
+    \vb{E} = - \frac{1}{2 \pi r} \dv{\Phi_{B}}{t} = - \frac{r}{2} \dv{\Phi_{B}}{t}
+\]
+
+Più in generale la legge di Faraday stabilisce
+\[
+    \oint{}{}{\va{E} \cdot}{\va{s}} = - \dv{\Phi_{B}}{t}
+\]
+\end{document}
+\clearpage

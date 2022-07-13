@@ -1,0 +1,36 @@
+\documentclass[../../Main/Apputni Fisica.tex]{subfiles}
+\begin{document}
+Si consideri Figura \ref{fig:21}.
+Da questi si osserva che la batteria deve fornire una maggiore quantità di energia, rispetto ad un circuito senza induttore.
+\\ \\
+Considerando dunque la potenza erogata
+\[
+    \vb{P} = I \varepsilon = I^{2} R + IL \dv{I}{t}
+\]
+
+Ponendo \(U\) l'energia immagazzinata nell'induttore, la velocità \(\dd U / \dd t\) con cui questa è immagazzinata è
+\[
+    \dv{U}{t} = IL \dv{I}{t}
+\]
+integrando
+\[
+    U = \int{}{}{}{U} = \int{0}{I}{LI}{I} = L \int{0}{I}{I}{I}
+\]
+\begin{equation}\label{eq:21}
+    U = \frac{1}{2} L I^{2}
+\end{equation}
+
+Si consideri ora un solenoide con induttanza \(L = \mu_{0} n^{2} V\).
+Sostituendo all'Equazione \eqref{eq:21} il campo magnetico di un solenoide, segue
+\[
+    U = \frac{1}{2} IL = \frac{1}{2} \mu_{0}n^{2}V (\frac{B}{\mu_{0} n})^{2} = \frac{\vb{B}^{2}}{2\mu_{0}} V
+\]
+da ciò l'energia per unita di volume \(\mu_{B}\) è
+\begin{equation}\label{eq:22}
+    \mu_{B} = \frac{U}{V} =  \frac{\vb{B}^{2}}{2 \mu_{0}}
+\end{equation}
+
+\begin{Note*}
+    Sebbene derivata per il caso di un solenoide, l'Equazione \eqref{eq:22} è valida per ogni regione dello spazio in cui sia presente un campo magnetico.
+\end{Note*}
+\end{document}

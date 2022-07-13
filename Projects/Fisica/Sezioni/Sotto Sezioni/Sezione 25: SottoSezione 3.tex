@@ -1,0 +1,56 @@
+\documentclass[../../Main/Appunti Fisica.tex]{subfiles}
+\begin{document}
+Si consideri la figura di seguito riportata.
+\begin{figure}[!h]
+    \centering
+    \begin{tikzpicture}[scale = 1, every node/.style={scale=1}]
+
+        % Magnetic field
+        \node (mField) [anchor = east] at (0, 0) {\(\va{B}\)};
+        \foreach \i in {-2, -1, ..., 2}{
+                \draw [-stealth, very thick] (0, 0.5 * \i) -- (1, 0.5 * \i);
+            }
+
+        % Coil & indicators
+        \draw [very thick] (1.5, 1.5) rectangle (3, -1.5);
+
+        \draw [|-|, thick] (3.5, 1.5) -- (3.5, -1.5);
+        \node [anchor = west] at (3.5, 0) {\(a\)};
+
+        \draw [|-|, thick] (1.5, -2) -- (3, -2);
+        \node [anchor = north] at (2.25, -2) {\(b\)};
+
+        \draw [stealth-] (1.5, 2) -- (2.5, 2);
+        \node [anchor = south] at (2, 2) {\(I\)};
+
+        \node [] at (2.25, 1.25) {\textcircled{1}};
+        \node [] at (2.25, -1.25) {\textcircled{3}};
+        \node [] at (1.75, 0) {\textcircled{2}};
+        \node [] at (2.75, 0) {\textcircled{4}};
+
+        \node [circ, color = MidnightBlue] at (2.25, 1.5) {};
+        \node [circ, color = MidnightBlue] at (2.25, -1.5) {};
+    \end{tikzpicture}
+    \caption{Schema di una spira soggetta a campo magnetico.}
+    \label{fig:16}
+\end{figure}
+
+Si osserva che sui fili \textcircled{1}, \textcircled{3} \(\va{L} \cp \va{B} = 0\), mentre per \textcircled{2}, \textcircled{4} si ha
+\[
+    \vb{F_{2}} = \vb{F_{4}} = Ia\vb{B}
+\]
+Supponendo che la spira sia incerneriata su \textcircled{3}, considerando che \(\vb{F_{2}}\) è opposta in direzione e verso ad \(\vb{F_{4}}\),
+la spira inizierà a ruotare con un momento
+\[\begin{aligned}
+        \tau_{MAX} & = \vb{F_{2}} \frac{b}{2} + \vb{F_{4}} \frac{b}{2} \\
+                   & = 2Ia\vb{B} \left( \frac{b}{2} \right)            \\
+                   & = Iab\vb{B}                                       \\
+                   & = IA\vb{B}                                        \\
+    \end{aligned}\]
+Se \(\vb{B}\) non è parallelo
+\[
+    \tau = IA\vb{B} \sin \theta
+\]
+ove \(\theta\) è l'angolo compreso tra la spira ed il campo.
+\end{document}
+\clearpage

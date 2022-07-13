@@ -1,0 +1,59 @@
+\documentclass[../../Main/Appunti Fisica.tex]{subfiles}
+\begin{document}
+Un elemento con grande induttanza è detto \textit{induttore}.
+\\ \\
+Si consideri la figura di seguito riportata.
+\begin{figure}[!h]
+    \centering
+    \begin{tikzpicture}[scale = 1, every node/.style={scale=1}]
+
+        \node (source) [battery1shape, rotate = -90] at (0, 0) {};
+        \node [anchor = east] at (-0.375, 0) {\(\varepsilon\)};
+
+        \node (sA) [circ] at ($(source.left) + (0.5, 1.25)$) {};
+        \node [anchor = south] at ($(source.left) + (0.5, 1.25)$) {\(a\)};
+
+        \node (sB) [circ] at ($(source.left) + (0.75, 0.75)$) {};
+        \node [anchor = east] at ($(source.left) + (0.75, 0.75)$) {\(b\)};
+
+        \node (sC) [circ] at ($(sA) + (0.5, 0)$) {};
+        \node [anchor = south] at ($(sA) + (0.5, 0)$) {\(s\)};
+
+        \draw (source.left) to [ccgsw] ($(source.left) + (0, 1.25)$) to (sA)
+        (sC) to [R] ($(sC) + (1.75, 0)$) to [L] ($(source.right) + (2.75, -1.25)$) to ($(source.right) + (0, -1.25)$) to (source.right);
+
+        \draw (sB) to ($(source.right) + (0.75, -1.25)$);
+
+        \draw (sC) to ($(sC) - (0.5, 0.25)$);
+
+    \end{tikzpicture}
+    \caption{Circuito RL.}
+    \label{fig:21}
+\end{figure}
+
+Si supponga \(s\) chiuso in \(a \text{a} t = 0\), mentre l'altro interruttore è aperto quando \(t < 0\).
+Applicando il secondo principio di Kickoff
+\begin{equation}\label{eq:20}
+    \varepsilon  - IR - \dv{I}{t}L = 0
+\end{equation}
+
+Ponendo \(x = (\varepsilon / R) - I \text{e} \dd x = -\dd I\), integrando segue
+\[\begin{gathered}
+        \int{x_{i}}{x_{f}}{\frac{1}{x}}{x} = \frac{R}{L} \int{0}{t}{}{t} \\
+        \ln \left( \frac{x}{x_{0}} \right) = \frac{R}{L} t
+    \end{gathered}\]
+da cui prendendo l'antilogaritmo
+\[
+    x = e^{-Rt/L} x_{0}
+\]
+
+Dunque a \(t = 0, I = 0\), ma dalla definizione di \(X, x_{0} = \varepsilon / R\), da cui
+\[
+    \frac{\varepsilon}{R} - I = \frac{\varepsilon}{R} e^{-Rt / L}
+\]
+cioè
+\[
+    I = \frac{\varepsilon}{R} \left( 1 - e^{-Rt / L} \right) = \frac{\varepsilon}{R} \left( 1 - e^{-t / \tau} \right)
+\]
+ponendo \(\tau = L / R\).
+\end{document}
